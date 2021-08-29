@@ -7,10 +7,7 @@ const Theme = {
     DARK: 'dark-theme',
 }
 
-localStorage.getItem('siteTheme') ? bodyRef.classList.add(startTheme):''
-    if (startTheme == Theme.LIGHT) {
-       switchToggle.checked = true
-    }
+bodyRef.classList.add(startTheme ? startTheme: Theme.LIGHT)
 
 if(localStorage.getItem("theme")){
     const checked = JSON.parse(localStorage.getItem("theme"))
